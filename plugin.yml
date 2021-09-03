@@ -1,0 +1,5 @@
+name: SR-Box
+version: 1.0.0
+api-version: 1.13
+main: me.fragment.srefactoring.box.BoxPlugin
+depend: [SR-Core, ProtocolLib]
