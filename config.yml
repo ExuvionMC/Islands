@@ -1,82 +1,94 @@
-messages:
-  reload-message: '&e&l[!] &eLes fichiers de configuration ont été rechargés.'
-  invalid-player: '&c&l[!] &cLe joueur est invalide ou n''est pas connecté.'
-  give-box: '&e&l[!] &eVous avez donner &6&lx%amount% %box% &eà &6&l%player%&e.'
-  box-given: '&e&l[!] &eVous avez reçu &6&lx%amount% %box%&e.'
-holo-menus:
-  main:
-    cancel:
-      title: '&4Annuler'
-      item:
-        material: PLAYER_HEAD
-        head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWFlMGU0ODZkYjRlYzQ5ZmYxYjUyY2ZlY2VkYTRjM2YzNmZkZTIzYzgzNWVhM2NjZmNhYWM5MzVlNDliNWYxMCJ9fX0=
-    list:
-      title: '&bRécompenses'
-      item:
-        material: PLAYER_HEAD
-        head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjJjNWY3YWM3MDZiMmU4YTg3OGViZjk3MmIwN2YzZDM2NDQ5YWI3MGIwOWFjZDk3M2VlYWJiMGQ1ZmM0YTZiNCJ9fX0=
-boxes:
-  iron:
-    name: '&b&lIron Box'
-    item:
-      material: PLAYER_HEAD
-      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWM5NmJlNzg4NmViN2RmNzU1MjVhMzYzZTVmNTQ5NjI2YzIxMzg4ZjBmZGE5ODhhNmU4YmY0ODdhNTMifX19
-      name: '&b&lIron Box'
-      lore:
-      - test
-      - test
-      - test
-      - test
-    rewards:
-      '1':
-        type: item
-        item:
-          material: DIAMOND_PICKAXE
-          name: Special Diamond Pickaxe
-          lore:
-          - test
-          - test
-        weight: 1
-      '2':
-        type: commands
-        item:
-          material: SUNFLOWER
-          name: MONEY $10.0000
-          lore:
-          - test
-          - test
-        weight: 2
-        commands:
-        - eco give %player% 10000
-  gold:
-    name: '&b&lGold Box'
-    item:
-      material: PLAYER_HEAD
-      head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWM5NmJlNzg4NmViN2RmNzU1MjVhMzYzZTVmNTQ5NjI2YzIxMzg4ZjBmZGE5ODhhNmU4YmY0ODdhNTMifX19
-      name: '&b&lGold Box'
-      lore:
-      - test
-      - test
-      - test
-      - test
-    rewards:
-      '1':
-        type: item
-        item:
-          material: GOLDEN_PICKAXE
-          name: Special Gold Pickaxe
-          lore:
-          - test
-          - test
-        weight: 1
-      '2':
-        type: commands
-        item:
-          material: SUNFLOWER
-          name: MONEY $5.0000
-          lore:
-          - test
-          - test
-        weight: 2
-        commands:
-        - eco give %player% 5000
+totem:
+  crystal:
+    name: '&c&lTotem d''île &c[&e%level%&c]'
+menus:
+  totem-main:
+    settings:
+      title: '&8Totem d''île'
+      size: 45
+      sound: ENTITY_BAT_TAKEOFF;1.0;2.0
+      filler-item:
+        material: GRAY_STAINED_GLASS_PANE
+        name: ''
+    items:
+      totem:
+        slot: 22
+        material: TOTEM_OF_UNDYING
+        name: '&cTotem d''île'
+        lore:
+        - ''
+        - ' &3* &bLevel: &a%level%&8/&c%max-level%'
+        - ' &3* &bMana: &a%mana%&8/&c%max-mana%'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour afficher &b&ol''Arbre des Niveaux&7&o. ))'
+  totem-level-tree:
+    settings:
+      title: '&8Totem d''île - Arbre des Niveaux'
+      size: 54
+      sound: ENTITY_BAT_TAKEOFF;1.0;2.0
+      skip-first: true
+      slots-iterator:
+      - 10
+      - 19
+      - 28
+      - 29
+      - 30
+      - 21
+      - 12
+      - 13
+      - 14
+      - 23
+      - 32
+      - 33
+      - 34
+      - 25
+      - 16
+      - 17
+      filler-item:
+        material: GRAY_STAINED_GLASS_PANE
+        name: ''
+    items:
+      next-page:
+        slot: 41
+        name: '&a&lNext Page -> &7(Click)'
+        material: ARROW
+        lore:
+        - '&7Click to view the next page of challenges'
+      previous-page:
+        slot: 39
+        name: '&c&lPrevious Page -> &7(Click)'
+        material: ARROW
+        lore:
+        - '&7Click to view the previous page of challenges'
+    task-items:
+      no-next-page:
+        material: BARRIER
+        sound: BLOCK_NOTE_BLOCK_PLING;1.0;2.0
+        name: '&c&lPas de page Suivante'
+        lore:
+        - '&7Vous êtes à la dernière page'
+      no-previous-page:
+        material: BARRIER
+        sound: BLOCK_NOTE_BLOCK_PLING;1.0;2.0
+        name: '&c&lPas de page Précédente'
+        lore:
+        - '&7Vous êtes à la première page'
+      level-not-complete:
+        material: BARRIER
+        sound: BLOCK_NOTE_BLOCK_PLING;1.0;2.0
+        name: '&c&lPré-requis Incomplet'
+        lore:
+        - '&7Vous devez compléter tous les Pré-requis.'
+      level-already-completed:
+        material: BARRIER
+        sound: BLOCK_NOTE_BLOCK_PLING;1.0;2.0
+        name: '&c&lNiveau déjà Débloqué'
+        lore:
+        - '&7Vous avez déjà débloqué ce niveau.'
+      level-locked:
+        material: BARRIER
+        sound: BLOCK_NOTE_BLOCK_PLING;1.0;2.0
+        name: '&c&lNiveau Bloqué'
+        lore:
+        - '&7Vous devez d''abord débloqué tout les niveaux'
+        - '&7précédents pour débloquer ce niveau.'

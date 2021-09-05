@@ -1,5 +1,5 @@
-name: SR-Box
+name: SR-Islands
 version: 1.0.0
 api-version: 1.13
-main: me.fragment.srefactoring.box.BoxPlugin
-depend: [SR-Core, ProtocolLib]
+main: me.fragment.srefactoring.islands.IslandsPlugin
+depend: [SR-Core, SuperiorSkyblock2]
