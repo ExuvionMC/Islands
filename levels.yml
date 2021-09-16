@@ -1,228 +1,1176 @@
 levels:
   1:
-    setings:
+    settings:
+      mana-max: 150
       required:
         mana: 0
     items:
       completed:
-        material: LIME_STAINED_GLASS_PANE
-        display-name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        material: END_CRYSTAL
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
         lore:
-        - '&2&lRécompenses Gratuites:'
-        - ' &a- &71x Rusty Key'
-        - ''
-        - '&2&lRécompenses Premium:'
-        - ' &a- &75x Rusty Key'
-        - ' &a- &71x Kraken Rank'
-      in-progress:
-        material: TOTEM_OF_UNDYING
-        display-name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
-        lore:
-        - '&2&lRécompenses Gratuites:'
-        - ' &a- &71x Rusty Key'
-        - ''
-        - '&2&lRécompenses Premium:'
-        - ' &a- &75x Rusty Key'
-        - ' &a- &71x Kraken Rank'
-        - ''
-        - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
-      locked:
-        material: WHITE_STAINED_GLASS_PANE
-        display-name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
-        lore:
-        - '&2&lRécompenses Gratuites:'
-        - ' &a- &71x Rusty Key'
-        - ''
-        - '&2&lRécompenses Premium:'
-        - ' &a- &75x Rusty Key'
-        - ' &a- &71x Kraken Rank'
-        - ''
-        - '&7&o(( Requis les niveaux précédents. ))'
+        - '&7Premier niveau du totem.'
+        - '&7Améliorez votre totem jusqu''au dernier'
+        - '&7niveau pour profiter de récompenses inédites !'
   2:
-    setings:
+    settings:
+      mana-max: 300
       required:
         mana: 100
+    rewards:
+      free:
+        mana: 50
+        upPoints: 1
+        commands:
+        - ''
+      boosted:
+        mana: 25
+        commands:
+        - ''
     items:
       completed:
         material: LIME_STAINED_GLASS_PANE
-        display-name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
         lore:
-        - '&2&lRécompenses Gratuites:'
-        - ' &a- &71x Rusty Key'
+        - '&2&lRécompenses:'
+        - ' &a- &7'
         - ''
-        - '&2&lRécompenses Premium:'
-        - ' &a- &75x Rusty Key'
-        - ' &a- &71x Kraken Rank'
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
       in-progress:
         material: TOTEM_OF_UNDYING
-        display-name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
         lore:
         - ''
         - '&2&lPrérequis:'
         - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
         - ''
-        - '&2&lRécompenses Gratuites:'
-        - ' &a- &71x Rusty Key'
+        - '&2&lRécompenses:'
+        - ' &a- &7'
         - ''
-        - '&2&lRécompenses Premium:'
-        - ' &a- &75x Rusty Key'
-        - ' &a- &71x Kraken Rank'
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
         - ''
         - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
       locked:
         material: WHITE_STAINED_GLASS_PANE
-        display-name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
         lore:
         - ''
         - '&2&lPrérequis:'
         - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
         - ''
-        - '&2&lRécompenses Gratuites:'
-        - ' &a- &71x Rusty Key'
+        - '&2&lRécompenses:'
+        - ' &a- &7'
         - ''
-        - '&2&lRécompenses Premium:'
-        - ' &a- &75x Rusty Key'
-        - ' &a- &71x Kraken Rank'
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
         - ''
         - '&7&o(( Requis les niveaux précédents. ))'
   3:
-    setings:
+    settings:
+      mana-max: 450
       required:
         mana: 200
     items:
       completed:
         material: LIME_STAINED_GLASS_PANE
-        display-name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
         lore:
-        - '&2&lRécompenses Gratuites:'
-        - ' &a- &71x Rusty Key'
+        - '&2&lRécompenses:'
+        - ' &a- &7'
         - ''
-        - '&2&lRécompenses Premium:'
-        - ' &a- &75x Rusty Key'
-        - ' &a- &71x Kraken Rank'
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
       in-progress:
         material: TOTEM_OF_UNDYING
-        display-name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
         lore:
         - ''
         - '&2&lPrérequis:'
         - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
         - ''
-        - '&2&lRécompenses Gratuites:'
-        - ' &a- &71x Rusty Key'
+        - '&2&lRécompenses:'
+        - ' &a- &7'
         - ''
-        - '&2&lRécompenses Premium:'
-        - ' &a- &75x Rusty Key'
-        - ' &a- &71x Kraken Rank'
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
         - ''
         - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
       locked:
         material: WHITE_STAINED_GLASS_PANE
-        display-name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
         lore:
         - ''
         - '&2&lPrérequis:'
         - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
         - ''
-        - '&2&lRécompenses Gratuites:'
-        - ' &a- &71x Rusty Key'
+        - '&2&lRécompenses:'
+        - ' &a- &7'
         - ''
-        - '&2&lRécompenses Premium:'
-        - ' &a- &75x Rusty Key'
-        - ' &a- &71x Kraken Rank'
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
         - ''
         - '&7&o(( Requis les niveaux précédents. ))'
   4:
-    setings:
+    settings:
+      mana-max: 600
       required:
         mana: 400
     items:
       completed:
         material: LIME_STAINED_GLASS_PANE
-        display-name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
         lore:
-        - '&2&lRécompenses Gratuites:'
-        - ' &a- &71x Rusty Key'
+        - '&2&lRécompenses:'
+        - ' &a- &7'
         - ''
-        - '&2&lRécompenses Premium:'
-        - ' &a- &75x Rusty Key'
-        - ' &a- &71x Kraken Rank'
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
       in-progress:
         material: TOTEM_OF_UNDYING
-        display-name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
         lore:
         - ''
         - '&2&lPrérequis:'
         - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
         - ''
-        - '&2&lRécompenses Gratuites:'
-        - ' &a- &71x Rusty Key'
+        - '&2&lRécompenses:'
+        - ' &a- &7'
         - ''
-        - '&2&lRécompenses Premium:'
-        - ' &a- &75x Rusty Key'
-        - ' &a- &71x Kraken Rank'
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
         - ''
         - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
       locked:
         material: WHITE_STAINED_GLASS_PANE
-        display-name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
         lore:
         - ''
         - '&2&lPrérequis:'
         - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
         - ''
-        - '&2&lRécompenses Gratuites:'
-        - ' &a- &71x Rusty Key'
+        - '&2&lRécompenses:'
+        - ' &a- &7'
         - ''
-        - '&2&lRécompenses Premium:'
-        - ' &a- &75x Rusty Key'
-        - ' &a- &71x Kraken Rank'
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
         - ''
         - '&7&o(( Requis les niveaux précédents. ))'
   5:
-    setings:
+    settings:
+      mana-max: 750
       required:
         mana: 500
     items:
       completed:
         material: LIME_STAINED_GLASS_PANE
-        display-name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
         lore:
-        - '&2&lRécompenses Gratuites:'
-        - ' &a- &71x Rusty Key'
+        - '&2&lRécompenses:'
+        - ' &a- &7'
         - ''
-        - '&2&lRécompenses Premium:'
-        - ' &a- &75x Rusty Key'
-        - ' &a- &71x Kraken Rank'
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
       in-progress:
         material: TOTEM_OF_UNDYING
-        display-name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
         lore:
         - ''
         - '&2&lPrérequis:'
         - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
         - ''
-        - '&2&lRécompenses Gratuites:'
-        - ' &a- &71x Rusty Key'
+        - '&2&lRécompenses:'
+        - ' &a- &7'
         - ''
-        - '&2&lRécompenses Premium:'
-        - ' &a- &75x Rusty Key'
-        - ' &a- &71x Kraken Rank'
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
         - ''
         - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
       locked:
         material: WHITE_STAINED_GLASS_PANE
-        display-name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
         lore:
         - ''
         - '&2&lPrérequis:'
         - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
         - ''
-        - '&2&lRécompenses Gratuites:'
-        - ' &a- &71x Rusty Key'
+        - '&2&lRécompenses:'
+        - ' &a- &7'
         - ''
-        - '&2&lRécompenses Premium:'
-        - ' &a- &75x Rusty Key'
-        - ' &a- &71x Kraken Rank'
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( Requis les niveaux précédents. ))'
+  6:
+    settings:
+      mana-max: 750
+      required:
+        mana: 500
+    items:
+      completed:
+        material: LIME_STAINED_GLASS_PANE
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        lore:
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+      in-progress:
+        material: TOTEM_OF_UNDYING
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
+      locked:
+        material: WHITE_STAINED_GLASS_PANE
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( Requis les niveaux précédents. ))'
+  7:
+    settings:
+      mana-max: 750
+      required:
+        mana: 500
+    items:
+      completed:
+        material: LIME_STAINED_GLASS_PANE
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        lore:
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+      in-progress:
+        material: TOTEM_OF_UNDYING
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
+      locked:
+        material: WHITE_STAINED_GLASS_PANE
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( Requis les niveaux précédents. ))'
+  8:
+    settings:
+      mana-max: 750
+      required:
+        mana: 500
+    items:
+      completed:
+        material: LIME_STAINED_GLASS_PANE
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        lore:
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+      in-progress:
+        material: TOTEM_OF_UNDYING
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
+      locked:
+        material: WHITE_STAINED_GLASS_PANE
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( Requis les niveaux précédents. ))'
+  9:
+    settings:
+      mana-max: 750
+      required:
+        mana: 500
+    items:
+      completed:
+        material: LIME_STAINED_GLASS_PANE
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        lore:
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+      in-progress:
+        material: TOTEM_OF_UNDYING
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
+      locked:
+        material: WHITE_STAINED_GLASS_PANE
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( Requis les niveaux précédents. ))'
+  10:
+    settings:
+      mana-max: 750
+      required:
+        mana: 500
+    items:
+      completed:
+        material: LIME_STAINED_GLASS_PANE
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        lore:
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+      in-progress:
+        material: TOTEM_OF_UNDYING
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
+      locked:
+        material: WHITE_STAINED_GLASS_PANE
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( Requis les niveaux précédents. ))'
+  11:
+    settings:
+      mana-max: 750
+      required:
+        mana: 500
+    items:
+      completed:
+        material: LIME_STAINED_GLASS_PANE
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        lore:
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+      in-progress:
+        material: TOTEM_OF_UNDYING
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
+      locked:
+        material: WHITE_STAINED_GLASS_PANE
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( Requis les niveaux précédents. ))'
+  12:
+    settings:
+      mana-max: 750
+      required:
+        mana: 500
+    items:
+      completed:
+        material: LIME_STAINED_GLASS_PANE
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        lore:
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+      in-progress:
+        material: TOTEM_OF_UNDYING
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
+      locked:
+        material: WHITE_STAINED_GLASS_PANE
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( Requis les niveaux précédents. ))'
+  13:
+    settings:
+      mana-max: 750
+      required:
+        mana: 500
+    items:
+      completed:
+        material: LIME_STAINED_GLASS_PANE
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        lore:
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+      in-progress:
+        material: TOTEM_OF_UNDYING
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
+      locked:
+        material: WHITE_STAINED_GLASS_PANE
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( Requis les niveaux précédents. ))'
+  14:
+    settings:
+      mana-max: 750
+      required:
+        mana: 500
+    items:
+      completed:
+        material: LIME_STAINED_GLASS_PANE
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        lore:
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+      in-progress:
+        material: TOTEM_OF_UNDYING
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
+      locked:
+        material: WHITE_STAINED_GLASS_PANE
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( Requis les niveaux précédents. ))'
+  15:
+    settings:
+      mana-max: 750
+      required:
+        mana: 500
+    items:
+      completed:
+        material: LIME_STAINED_GLASS_PANE
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        lore:
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+      in-progress:
+        material: TOTEM_OF_UNDYING
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
+      locked:
+        material: WHITE_STAINED_GLASS_PANE
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( Requis les niveaux précédents. ))'
+  16:
+    settings:
+      mana-max: 750
+      required:
+        mana: 500
+    items:
+      completed:
+        material: LIME_STAINED_GLASS_PANE
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        lore:
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+      in-progress:
+        material: TOTEM_OF_UNDYING
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
+      locked:
+        material: WHITE_STAINED_GLASS_PANE
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( Requis les niveaux précédents. ))'
+  17:
+    settings:
+      mana-max: 750
+      required:
+        mana: 500
+    items:
+      completed:
+        material: LIME_STAINED_GLASS_PANE
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        lore:
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+      in-progress:
+        material: TOTEM_OF_UNDYING
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
+      locked:
+        material: WHITE_STAINED_GLASS_PANE
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( Requis les niveaux précédents. ))'
+  18:
+    settings:
+      mana-max: 750
+      required:
+        mana: 500
+    items:
+      completed:
+        material: LIME_STAINED_GLASS_PANE
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        lore:
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+      in-progress:
+        material: TOTEM_OF_UNDYING
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
+      locked:
+        material: WHITE_STAINED_GLASS_PANE
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( Requis les niveaux précédents. ))'
+  19:
+    settings:
+      mana-max: 750
+      required:
+        mana: 500
+    items:
+      completed:
+        material: LIME_STAINED_GLASS_PANE
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        lore:
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+      in-progress:
+        material: TOTEM_OF_UNDYING
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
+      locked:
+        material: WHITE_STAINED_GLASS_PANE
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( Requis les niveaux précédents. ))'
+  20:
+    settings:
+      mana-max: 750
+      required:
+        mana: 500
+    items:
+      completed:
+        material: LIME_STAINED_GLASS_PANE
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        lore:
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+      in-progress:
+        material: TOTEM_OF_UNDYING
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
+      locked:
+        material: WHITE_STAINED_GLASS_PANE
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( Requis les niveaux précédents. ))'
+  21:
+    settings:
+      mana-max: 750
+      required:
+        mana: 500
+    items:
+      completed:
+        material: LIME_STAINED_GLASS_PANE
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        lore:
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+      in-progress:
+        material: TOTEM_OF_UNDYING
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
+      locked:
+        material: WHITE_STAINED_GLASS_PANE
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( Requis les niveaux précédents. ))'
+  22:
+    settings:
+      mana-max: 750
+      required:
+        mana: 500
+    items:
+      completed:
+        material: LIME_STAINED_GLASS_PANE
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        lore:
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+      in-progress:
+        material: TOTEM_OF_UNDYING
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
+      locked:
+        material: WHITE_STAINED_GLASS_PANE
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( Requis les niveaux précédents. ))'
+  23:
+    settings:
+      mana-max: 750
+      required:
+        mana: 500
+    items:
+      completed:
+        material: LIME_STAINED_GLASS_PANE
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        lore:
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+      in-progress:
+        material: TOTEM_OF_UNDYING
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
+      locked:
+        material: WHITE_STAINED_GLASS_PANE
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( Requis les niveaux précédents. ))'
+  24:
+    settings:
+      mana-max: 750
+      required:
+        mana: 500
+    items:
+      completed:
+        material: LIME_STAINED_GLASS_PANE
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        lore:
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+      in-progress:
+        material: TOTEM_OF_UNDYING
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
+      locked:
+        material: WHITE_STAINED_GLASS_PANE
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( Requis les niveaux précédents. ))'
+  25:
+    settings:
+      mana-max: 750
+      required:
+        mana: 500
+    items:
+      completed:
+        material: LIME_STAINED_GLASS_PANE
+        name: '&a&lNiveau &2&l%roman-level% &7(Débloqué)'
+        lore:
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+      in-progress:
+        material: TOTEM_OF_UNDYING
+        name: '&e&lNiveau &6&l%roman-level% &7(En cours)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour débloquer le &b&oNiveau %roman-level%&7&o. ))'
+      locked:
+        material: WHITE_STAINED_GLASS_PANE
+        name: '&c&lNiveau &4&l%roman-level% &7(Bloqué)'
+        lore:
+        - ''
+        - '&2&lPrérequis:'
+        - ' &a- &7Mana: &f%current-mana%&8/&f%required-mana%'
+        - ''
+        - '&2&lRécompenses:'
+        - ' &a- &7'
+        - ''
+        - '&2&lRécompenses Boostées:'
+        - ' &a- &7'
+        - ' &a- &7'
         - ''
         - '&7&o(( Requis les niveaux précédents. ))'

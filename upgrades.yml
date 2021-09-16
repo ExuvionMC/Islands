@@ -1,0 +1,69 @@
+upgrades:
+  border-size:
+    settings:
+      levels:
+        1:
+          upPoints: 0 
+          mana: 0 
+        2:
+          upPoints: 3
+          mana: 500 
+        3:
+          upPoints: 5
+          mana: 1000 
+        4:
+          upPoints: 8
+          mana: 8000
+        5:
+          upPoints: 12
+          mana: 25000
+    items:
+      unlocked:
+        material: PLAYER_HEAD
+        head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2VkMWFiYTczZjYzOWY0YmM0MmJkNDgxOTZjNzE1MTk3YmUyNzEyYzNiOTYyYzk3ZWJmOWU5ZWQ4ZWZhMDI1In19fQ==
+        name: '&e&lTaille d''île &7(Débloqué)'
+        lore:
+        - ''
+        - '&7Augmente la taille de ton île.'
+        - ''
+        - '&3* &bNiveau: &8[ &7%upgrade-progress-bar% &8]'
+        - '&3* &bActuellement: &a%island-size% x %island-size%'
+        - ''
+        - '&7&o(( Clique pour améliorer. ))'
+      levelable:
+        material: PLAYER_HEAD
+        head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2VkMWFiYTczZjYzOWY0YmM0MmJkNDgxOTZjNzE1MTk3YmUyNzEyYzNiOTYyYzk3ZWJmOWU5ZWQ4ZWZhMDI1In19fQ==
+        name: '&e&lTaille d''île &7(Niveau %roman-level%)'
+        lore:
+        - ''
+        - '&7Augmente la taille de ton île.'
+        - ''
+        - '&3* &bTaille: &f%island-current-size% x %island-current-size% &e➜ &a%island-size% x %island-size%'
+        - '&3* &bCoût:'
+        - '&3*   &b➥ Mana: &e%mana-cost%'
+        - '&3*   &b➥ Points d''Amélioration: &e%upPoints-cost%'
+        - ''
+        - '&7&o(( Clique pour améliorer. ))'
+      leveled:
+        material: PLAYER_HEAD
+        head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2VkMWFiYTczZjYzOWY0YmM0MmJkNDgxOTZjNzE1MTk3YmUyNzEyYzNiOTYyYzk3ZWJmOWU5ZWQ4ZWZhMDI1In19fQ==
+        name: '&e&lTaille d''île &7(Niveau %roman-level%)'
+        lore:
+        - ''
+        - '&7Augmente la taille de ton île.'
+        - ''
+        - '&3* &bTaille: &f%island-size% x %island-size%'
+        - ''
+        - '&7&o(( Vous avez déjà ce niveau. ))'
+      locked:
+        material: PLAYER_HEAD
+        head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2VkMWFiYTczZjYzOWY0YmM0MmJkNDgxOTZjNzE1MTk3YmUyNzEyYzNiOTYyYzk3ZWJmOWU5ZWQ4ZWZhMDI1In19fQ==
+        name: '&e&lTaille d''île &7(Bloqué)'
+        lore:
+        - ''
+        - '&7Augmente la taille de ton île.'
+        - ''
+        - '&3* &bNiveau: &8[ &7%upgrade-progress-bar% &8]'
+        - '&3* &bActuellement: &a%island-size% x %island-size%'
+        - ''
+        - '&7&o(( Cette amélioration n''est pas débloqué. ))'

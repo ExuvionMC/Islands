@@ -47,14 +47,23 @@ public class TotemMainInv implements InventoryProvider {
 	@Override
 	public void init(Player player, InventoryContents contents) {
 		contents.fill(ClickableItem.empty(IslandsPlugin.getConf().getTotemMainInvFillerItem()));
-
 		totem.getLevel().thenAcceptBoth(totem.getMana(), (level, mana) -> {
-			contents.set(new SlotPos(IslandsPlugin.getConf().getTotemMainInvTotemSlot() / 9, IslandsPlugin.getConf().getTotemMainInvTotemSlot() % 9), ClickableItem.of(
-					Utils.applyPlaceholders(IslandsPlugin.getConf().getTotemMainInvTotemItem(),
-							Arrays.asList(new DoublePair<String, String>("%level%", Utils.longFormatter(level)), new DoublePair<String, String>("%mana%", Utils.longFormatter(mana)))),
-					click -> {
-						TotemLevelTreeInv.openTotemMainInv(player, totem);
-					}));
+			totem.getUpPoints().thenAcceptBoth(totem.getLevelConfig(), (upPoints, levelConfig) -> {
+				contents.set(new SlotPos(IslandsPlugin.getConf().getTotemMainInvTotemSlot() / 9, IslandsPlugin.getConf().getTotemMainInvTotemSlot() % 9),
+						ClickableItem.of(Utils.applyPlaceholders(IslandsPlugin.getConf().getTotemMainInvTotemItem(),
+								Arrays.asList(new DoublePair<String, String>("%level%", Utils.longFormatter(level)), new DoublePair<String, String>("%mana%", Utils.longFormatter(mana)),
+										new DoublePair<String, String>("%upPoints%", Utils.longFormatter(upPoints)),
+										new DoublePair<String, String>("%max-level%", Utils.longFormatter(IslandsPlugin.getLevelsConfig().getLevels().size())),
+										new DoublePair<String, String>("%max-mana%", Utils.longFormatter(levelConfig.getManaMaxSettings())))),
+								click -> {
+									TotemLevelTreeInv.openTotemLevelTreeInv(player, totem, contents.inventory());
+								}));
+				contents.set(new SlotPos(IslandsPlugin.getConf().getTotemMainInvUpgradesSlot() / 9, IslandsPlugin.getConf().getTotemMainInvUpgradesSlot() % 9),
+						ClickableItem.of(Utils.applyPlaceholders(IslandsPlugin.getConf().getTotemMainInvUpgradesItem(),
+								Arrays.asList(new DoublePair<String, String>("%upPoints%", Utils.longFormatter(upPoints)))), click -> {
+									TotemUpgradesInv.openTotemUpgradesInv(player, totem, contents.inventory());
+								}));
+			});
 		});
 	}
 

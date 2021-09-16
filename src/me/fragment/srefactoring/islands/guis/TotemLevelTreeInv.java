@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.lang.ArrayUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
@@ -30,11 +29,11 @@ public class TotemLevelTreeInv implements InventoryProvider {
 	private Map<Long, DoublePair<SlotPos, ClickableItem>> tempItems = new HashMap<Long, DoublePair<SlotPos, ClickableItem>>();
 	private Totem totem;
 
-	public static SmartInventory openTotemMainInv(Player player, Totem totem) {
+	public static SmartInventory openTotemLevelTreeInv(Player player, Totem totem, SmartInventory parentInv) {
 		SmartInventory inv = SmartInventory.builder().manager(CorePlugin.getInventoryManager()).id("islandTotemLevelTreeGUI").provider(new TotemLevelTreeInv(totem))
-				.size(IslandsPlugin.getConf().getTotemMainInvSize() / 9, 9).title(IslandsPlugin.getConf().getTotemMainInvTitle()).build();
-		player.playSound(player.getLocation(), IslandsPlugin.getConf().getTotemMainInvSound().getFirst(), IslandsPlugin.getConf().getTotemMainInvSound().getSecond(),
-				IslandsPlugin.getConf().getTotemMainInvSound().getThird());
+				.size(IslandsPlugin.getConf().getTotemLevelTreeInvSize() / 9, 9).title(IslandsPlugin.getConf().getTotemLevelTreeInvTitle()).parent(parentInv).build();
+		player.playSound(player.getLocation(), IslandsPlugin.getConf().getTotemLevelTreeInvSound().getFirst(), IslandsPlugin.getConf().getTotemLevelTreeInvSound().getSecond(),
+				IslandsPlugin.getConf().getTotemLevelTreeInvSound().getThird());
 		inv.open(player);
 
 		return inv;
@@ -54,18 +53,16 @@ public class TotemLevelTreeInv implements InventoryProvider {
 
 	@Override
 	public void init(Player player, InventoryContents contents) {
+		Pagination pagination = contents.pagination();
+		contents.fill(ClickableItem.empty(IslandsPlugin.getConf().getTotemMainInvFillerItem()));
+
 		totem.getLevel().thenAcceptBoth(totem.getMana(), (level, mana) -> {
-			Pagination pagination = contents.pagination();
-			ClickableItem[] levels = new ClickableItem[IslandsPlugin.getLevelsConfig().getLevels().size()];
+			ClickableItem[] levels = new ClickableItem[Math.max(Iterators.size(IslandsPlugin.getConf().getTotemLevelTreeInvSlotsIterator()),
+					IslandsPlugin.getLevelsConfig().getLevels().size()) + (IslandsPlugin.getConf().getTotemLevelTreeInvSkipFirst() ? 1 : 0)];
 
-			contents.fill(ClickableItem.empty(IslandsPlugin.getConf().getTotemMainInvFillerItem()));
-
-			contents.set(new SlotPos(IslandsPlugin.getConf().getTotemMainInvTotemSlot() / 9, IslandsPlugin.getConf().getTotemMainInvTotemSlot() % 9), ClickableItem.of(
-					Utils.applyPlaceholders(IslandsPlugin.getConf().getTotemMainInvTotemItem(),
-							Arrays.asList(new DoublePair<String, String>("%level%", Utils.longFormatter(level)), new DoublePair<String, String>("%mana%", Utils.longFormatter(mana)))),
-					click -> {
-						System.out.println(click);
-					}));
+			Arrays.fill(levels, ClickableItem.empty(IslandsPlugin.getConf().getTotemLevelTreeInvFillerItem()));
+			if (IslandsPlugin.getConf().getTotemLevelTreeInvSkipFirst())
+				levels[0] = ClickableItem.empty(IslandsPlugin.getConf().getTotemLevelTreeInvFillerItem());
 
 			for (Map.Entry<Integer, LevelConfig> entry : IslandsPlugin.getLevelsConfig().getLevels().entrySet()) {
 				List<DoublePair<String, String>> placeholders = Arrays.asList(new DoublePair<String, String>("%roman-level%", Utils.IntegerToRomanNumeral(entry.getKey())),
@@ -106,16 +103,53 @@ public class TotemLevelTreeInv implements InventoryProvider {
 					});
 				}
 
-				levels[entry.getKey() - 1] = item;
-			}
-
-			if (IslandsPlugin.getConf().getTotemLevelTreeInvSkipFirst()) {
-				levels = (ClickableItem[]) ArrayUtils.add(levels, 0, IslandsPlugin.getConf().getTotemLevelTreeInvFillerItem());
+				levels[IslandsPlugin.getConf().getTotemLevelTreeInvSkipFirst() ? entry.getKey() : entry.getKey() - 1] = item;
 			}
 
 			pagination.setItemsPerPage(Iterators.size(IslandsPlugin.getConf().getTotemLevelTreeInvSlotsIterator()));
 			pagination.setItems(levels);
 			pagination.addToIterator(contents.newIterator(SlotIterator.Type.CUSTOM, IslandsPlugin.getConf().getTotemLevelTreeInvSlotsIterator()));
+
+			contents.set(new SlotPos(IslandsPlugin.getConf().getTotemLevelTreeInvBackSlot() / 9, IslandsPlugin.getConf().getTotemLevelTreeInvBackSlot() % 9),
+					ClickableItem.of(IslandsPlugin.getConf().getTotemLevelTreeInvBackItem(), click -> {
+						contents.inventory().getParent().ifPresent(parentInv -> parentInv.open(player));
+					}));
+			if (!pagination.isLast()) {
+				contents.set(new SlotPos(IslandsPlugin.getConf().getTotemLevelTreeInvNextPageSlot() / 9, IslandsPlugin.getConf().getTotemLevelTreeInvNextPageSlot() % 9),
+						ClickableItem.of(IslandsPlugin.getConf().getTotemLevelTreeInvNextPageItem(), click -> {
+							if (pagination.isLast()) {
+								this.tempItems.put(System.currentTimeMillis() + 3000, new DoublePair<SlotPos, ClickableItem>(new SlotPos(click.getSlot() / 9, click.getSlot() % 9),
+										contents.get(new SlotPos(click.getSlot() / 9, click.getSlot() % 9)).get()));
+								click.setCurrentItem(IslandsPlugin.getConf().getTotemLevelTreeInvNoNextPageTaskItem());
+								player.playSound(player.getLocation(), IslandsPlugin.getConf().getTotemLevelTreeInvNoNextPageTaskSound().getFirst(),
+										IslandsPlugin.getConf().getTotemLevelTreeInvNoNextPageTaskSound().getSecond(),
+										IslandsPlugin.getConf().getTotemLevelTreeInvNoNextPageTaskSound().getThird());
+
+								return;
+							}
+
+							this.tempItems.clear();
+							contents.inventory().open(player, pagination.next().getPage());
+						}));
+			}
+			if (!pagination.isFirst()) {
+				contents.set(new SlotPos(IslandsPlugin.getConf().getTotemLevelTreeInvPreviousPageSlot() / 9, IslandsPlugin.getConf().getTotemLevelTreeInvPreviousPageSlot() % 9),
+						ClickableItem.of(IslandsPlugin.getConf().getTotemLevelTreeInvPreviousPageItem(), click -> {
+							if (pagination.isFirst()) {
+								this.tempItems.put(System.currentTimeMillis() + 3000, new DoublePair<SlotPos, ClickableItem>(new SlotPos(click.getSlot() / 9, click.getSlot() % 9),
+										contents.get(new SlotPos(click.getSlot() / 9, click.getSlot() % 9)).get()));
+								click.setCurrentItem(IslandsPlugin.getConf().getTotemLevelTreeInvNoPreviousPageTaskItem());
+								player.playSound(player.getLocation(), IslandsPlugin.getConf().getTotemLevelTreeInvNoPreviousPageTaskSound().getFirst(),
+										IslandsPlugin.getConf().getTotemLevelTreeInvNoPreviousPageTaskSound().getSecond(),
+										IslandsPlugin.getConf().getTotemLevelTreeInvNoPreviousPageTaskSound().getThird());
+
+								return;
+							}
+
+							this.tempItems.clear();
+							contents.inventory().open(player, pagination.previous().getPage());
+						}));
+			}
 		});
 	}
 

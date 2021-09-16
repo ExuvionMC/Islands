@@ -3,14 +3,16 @@ package me.fragment.srefactoring.islands;
 import me.fragment.srefactoring.core.plugins.SRPlugin;
 import me.fragment.srefactoring.islands.config.Config;
 import me.fragment.srefactoring.islands.config.LevelsConfig;
-import me.fragment.srefactoring.islands.listeners.VanillaEvents;
+import me.fragment.srefactoring.islands.config.UpgradesConfig;
 import me.fragment.srefactoring.islands.listeners.SkyblockEvents;
+import me.fragment.srefactoring.islands.listeners.VanillaEvents;
 import me.fragment.srefactoring.islands.managers.TotemManager;
 
 public class IslandsPlugin extends SRPlugin {
 
 	private static Config config;
 	private static LevelsConfig levelsConfig;
+	private static UpgradesConfig upgradesConfig;
 
 	private static TotemManager totemManager;
 
@@ -19,8 +21,10 @@ public class IslandsPlugin extends SRPlugin {
 		super.onEnable();
 		saveDefaultConfig();
 		saveResource("levels.yml", false);
+		saveResource("upgrades.yml", false);
 		config = new Config();
 		levelsConfig = new LevelsConfig();
+		upgradesConfig = new UpgradesConfig();
 
 		totemManager = new TotemManager();
 
@@ -39,6 +43,10 @@ public class IslandsPlugin extends SRPlugin {
 
 	public static LevelsConfig getLevelsConfig() {
 		return levelsConfig;
+	}
+
+	public static UpgradesConfig getUpgradesConfig() {
+		return upgradesConfig;
 	}
 
 	public static TotemManager getTotemManager() {

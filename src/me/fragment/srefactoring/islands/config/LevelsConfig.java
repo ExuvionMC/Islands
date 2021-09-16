@@ -31,8 +31,12 @@ public class LevelsConfig extends AbstractConfig {
 		}
 
 		// Settings Section
+		public int getManaMaxSettings() {
+			return this.section.getInt("settings.mana-max");
+		}
+
 		public int getManaRequiredSettings() {
-			return this.section.getInt("settings.mana");
+			return this.section.getInt("settings.required.mana");
 		}
 
 		// Items Section

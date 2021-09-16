@@ -9,7 +9,7 @@ menus:
       sound: ENTITY_BAT_TAKEOFF;1.0;2.0
       filler-item:
         material: GRAY_STAINED_GLASS_PANE
-        name: ''
+        name: ' '
     items:
       totem:
         slot: 22
@@ -19,8 +19,119 @@ menus:
         - ''
         - ' &3* &bLevel: &a%level%&8/&c%max-level%'
         - ' &3* &bMana: &a%mana%&8/&c%max-mana%'
+        - ' &3* &bPoints d''Améliorations: &a%upPoints%'
         - ''
         - '&7&o(( &f&oClique ici &7&opour afficher &b&ol''Arbre des Niveaux&7&o. ))'
+      upgrades:
+        slot: 24
+        material: ANVIL
+        name: '&cAméliorations d''île'
+        lore:
+        - ''
+        - ' &3* &bLevel: &a%level%&8/&c%max-level%'
+        - ' &3* &bMana: &a%mana%&8/&c%max-mana%'
+        - ' &3* &bPoints d''Améliorations: &a%upPoints%'
+        - ''
+        - '&7&o(( &f&oClique ici &7&opour afficher &b&oles Améliorations&7&o. ))'
+  totem-upgrades:
+    settings:
+      title: '&8Totem d''île - Améliorations'
+      size: 27
+      sound: ENTITY_BAT_TAKEOFF;1.0;2.0
+      progress-bar:
+        filled: ■
+        unfilled: □
+      filler-item:
+        material: GRAY_STAINED_GLASS_PANE
+        name: ' '
+      slots-iterator:
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+    items:
+      back:
+        slot: 22
+        name: '&e&lRetour'
+        material: ARROW
+        lore:
+        - '&7Clique pour passer à la page suivante'
+      next-page:
+        slot: 23
+        name: '&a&lPage Suivante'
+        material: ARROW
+        lore:
+        - '&7&o(( &f&oClique &7&opour passer à la page suivante ))'
+      previous-page:
+        slot: 21
+        name: '&c&lPage Précédente'
+        material: ARROW
+        lore:
+        - '&7&o(( &f&oClique &7&opour passer à la page précédente ))'
+    task-items:
+      no-next-page:
+        material: BARRIER
+        sound: BLOCK_NOTE_BLOCK_PLING;1.0;2.0
+        name: '&c&lPas de page Suivante'
+        lore:
+        - '&7Vous êtes à la dernière page'
+      no-previous-page:
+        material: BARRIER
+        sound: BLOCK_NOTE_BLOCK_PLING;1.0;2.0
+        name: '&c&lPas de page Précédente'
+        lore:
+        - '&7Vous êtes à la première page'
+  totem-upgrade:
+    settings:
+      title: '&8Améliorations d''île - %upgrade-name%'
+      size: 27
+      sound: ENTITY_BAT_TAKEOFF;1.0;2.0
+      filler-item:
+        material: GRAY_STAINED_GLASS_PANE
+        name: ' '
+      slots-iterator:
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+    items:
+      back:
+        slot: 22
+        name: '&e&lRetour'
+        material: ARROW
+        lore:
+        - '&7Clique pour passer à la page suivante'
+      next-page:
+        slot: 23
+        name: '&a&lPage Suivante'
+        material: ARROW
+        lore:
+        - '&7&o(( &f&oClique &7&opour passer à la page suivante ))'
+      previous-page:
+        slot: 21
+        name: '&c&lPage Précédente'
+        material: ARROW
+        lore:
+        - '&7&o(( &f&oClique &7&opour passer à la page précédente ))'
+    task-items:
+      no-next-page:
+        material: BARRIER
+        sound: BLOCK_NOTE_BLOCK_PLING;1.0;2.0
+        name: '&c&lPas de page Suivante'
+        lore:
+        - '&7Vous êtes à la dernière page'
+      no-previous-page:
+        material: BARRIER
+        sound: BLOCK_NOTE_BLOCK_PLING;1.0;2.0
+        name: '&c&lPas de page Précédente'
+        lore:
+        - '&7Vous êtes à la première page'
   totem-level-tree:
     settings:
       title: '&8Totem d''île - Arbre des Niveaux'
@@ -46,20 +157,26 @@ menus:
       - 17
       filler-item:
         material: GRAY_STAINED_GLASS_PANE
-        name: ''
+        name: ' '
     items:
+      back:
+        slot: 49
+        name: '&e&lRetour'
+        material: ARROW
+        lore:
+        - '&7Clique pour passer à la page suivante'
       next-page:
-        slot: 41
-        name: '&a&lNext Page -> &7(Click)'
+        slot: 50
+        name: '&a&lPage Suivante'
         material: ARROW
         lore:
-        - '&7Click to view the next page of challenges'
+        - '&7&o(( &f&oClique &7&opour passer à la page suivante ))'
       previous-page:
-        slot: 39
-        name: '&c&lPrevious Page -> &7(Click)'
+        slot: 48
+        name: '&c&lPage Précédente'
         material: ARROW
         lore:
-        - '&7Click to view the previous page of challenges'
+        - '&7&o(( &f&oClique &7&opour passer à la page précédente ))'
     task-items:
       no-next-page:
         material: BARRIER

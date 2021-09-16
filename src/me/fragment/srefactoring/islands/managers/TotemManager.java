@@ -14,6 +14,7 @@ import org.bukkit.util.Vector;
 import com.bgsoftware.superiorskyblock.api.island.Island;
 
 import co.aikar.idb.DB;
+import me.fragment.srefactoring.islands.IslandsPlugin;
 import me.fragment.srefactoring.islands.managers.Totem.TotemCrystal;
 
 public class TotemManager {
@@ -21,7 +22,12 @@ public class TotemManager {
 	private Map<String, Vector> totemVectors = new HashMap<String, Vector>();
 
 	public TotemManager() {
-		// TODO Auto-generated constructor stub
+		DB.getResultsAsync("SELECT * FROM `upgrades`").thenAccept(results -> {
+			IslandsPlugin.getUpgradesConfig().getUpgradesConfig().stream()
+					.filter(upgrade -> results.stream().map(row -> row.getString("name")).noneMatch(name -> name.equals(upgrade.getName()))).forEach(upgrade -> {
+						DB.executeUpdateAsync("INSERT INTO `upgrades`(`name`) VALUES (?)", upgrade.getName());
+					});
+		});
 	}
 
 	public Totem createTotem(Island island) {
